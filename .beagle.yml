@@ -23,9 +23,9 @@ steps:
         - ./vendor
       endpoint: https://cache.wodcloud.com
       access_key:
-        from_secret: ACCESS_KEY_minio-warp
+        from_secret: ACCESS_KEY_MINIO
       secret_key:
-        from_secret: SECRET_KEY_minio-warp
+        from_secret: SECRET_KEY_MINIO
 
   - name: fetch
     image: registry.cn-qingdao.aliyuncs.com/wod/devops-git:1.0
@@ -108,14 +108,14 @@ get:
 
 ---
 kind: secret
-name: ACCESS_KEY_minio-warp
+name: ACCESS_KEY_MINIO
 get:
-  name: ACCESS_KEY_minio-warp
+  name: ACCESS_KEY_MINIO
   path: devops-secrets
 
 ---
 kind: secret
-name: SECRET_KEY_minio-warp
+name: SECRET_KEY_MINIO
 get:
-  name: SECRET_KEY_minio-warp
+  name: SECRET_KEY_MINIO
   path: devops-secrets
