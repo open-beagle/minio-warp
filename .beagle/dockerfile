@@ -1,0 +1,15 @@
+ARG BASE
+
+FROM ${BASE}
+
+ARG AUTHOR
+ARG VERSION
+
+LABEL maintainer=${AUTHOR} version=${VERSION}
+
+ARG TARGETOS=linux
+ARG TARGETARCH
+
+COPY dist/warp-${TARGETOS}-${TARGETARCH} /usr/bin/warp
+
+ENTRYPOINT ["/usr/bin/warp"]

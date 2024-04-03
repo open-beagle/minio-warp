@@ -17,3 +17,5 @@ dist
 
 # zst files
 *.zst
+
+/vendor
